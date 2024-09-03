@@ -440,7 +440,7 @@ namespace KoaleskMod.KoaleskCharacter
                 skillNameToken = KOALESK_PREFIX + "SPECIAL_DEADNIGHT_NAME",
                 skillDescriptionToken = KOALESK_PREFIX + "SPECIAL_DEADNIGHT_DESCRIPTION",
                 keywordTokens = new string[] { },
-                skillIcon = assetBundle.LoadAsset<Sprite>("texShadowDance"),
+                skillIcon = assetBundle.LoadAsset<Sprite>("texDeadNight"),
 
                 activationState = new SerializableEntityStateType(typeof(RoseThorn)),
                 activationStateMachineName = "Weapon",
