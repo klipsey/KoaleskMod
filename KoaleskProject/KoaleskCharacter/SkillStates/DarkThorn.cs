@@ -5,15 +5,6 @@ using RoR2;
 using UnityEngine.AddressableAssets;
 using KoaleskMod.KoaleskCharacter.Content;
 using static R2API.DamageAPI;
-using UnityEngine.Networking;
-using R2API.Networking;
-using KoaleskMod.KoaleskCharacter.Components;
-using R2API.Networking.Interfaces;
-using HG;
-using static UnityEngine.ParticleSystem.PlaybackState;
-using static UnityEngine.UI.GridLayoutGroup;
-using static UnityEngine.UI.Image;
-using System;
 using R2API;
 
 namespace KoaleskMod.KoaleskCharacter.SkillStates
@@ -90,7 +81,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     procChainMask = default(ProcChainMask),
                     procCoefficient = procCoefficient,
                     maxDistance = 20f + blightStacks,
-                    radius = 6,
+                    radius = 6f,
                     isCrit = RollCrit(),
                     muzzleName = "HandL",
                     minSpread = 0f,

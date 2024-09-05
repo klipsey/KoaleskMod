@@ -1,6 +1,4 @@
-﻿using R2API;
-using R2API.Networking;
-using R2API.Networking.Interfaces;
+﻿using RoR2.Projectile;
 using RoR2;
 using RoR2.HudOverlay;
 using UnityEngine;
@@ -12,8 +10,9 @@ using TMPro;
 
 namespace KoaleskMod.KoaleskCharacter.Components
 {
-    public class KoaleskController : MonoBehaviour
+    public class KoaleskController : NetworkBehaviour
     {
+        private GameObject blightProjectilePrefab = KoaleskAssets.KoaleskBlightProjectilePrefab;
         private CharacterBody characterBody;
         private ModelSkinController skinController;
         private ChildLocator childLocator;
@@ -68,6 +67,12 @@ namespace KoaleskMod.KoaleskCharacter.Components
                 if(blightDecayTimer <= 0)
                 {
                     if (NetworkServer.active) characterBody.RemoveBuff(KoaleskBuffs.koaleskBlightBuff);
+
+                    if(hasAuthority)
+                    {
+                        ProjectileManager.instance.FireProjectile(blightProjectilePrefab, characterBody.footPosition, Quaternion.identity, null, 0f, 0f, false, DamageColorIndex.Default, null);
+                    }
+
                     blightDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value;
                 }
             }

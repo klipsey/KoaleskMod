@@ -37,7 +37,12 @@ namespace KoaleskMod.KoaleskCharacter.Content
         internal static GameObject KoaleskHealEffect;
         //Models
         //Projectiles
+        internal static GameObject KoaleskBlightProjectilePrefab;
+
         internal static GameObject KoaleskDarkThornProjectile;
+
+        internal static GameObject KoaleskBloodyStakeProjectile;
+        internal static GameObject KoaleskBloodyStakeGhost;
         //Sounds
         internal static NetworkSoundEventDef swordImpactSoundEvent;
 
@@ -126,7 +131,100 @@ namespace KoaleskMod.KoaleskCharacter.Content
         #region projectiles
         private static void CreateProjectiles()
         {
-            
+            KoaleskBloodyStakeProjectile = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Commando/FMJRamping.prefab").WaitForCompletion().InstantiateClone("KoaleskBloodyStake");
+
+            ProjectileSimple needleSimple = KoaleskBloodyStakeProjectile.GetComponent<ProjectileSimple>();
+            needleSimple.desiredForwardSpeed = 125f;
+            needleSimple.lifetime = 3f;
+            needleSimple.updateAfterFiring = true;
+
+            ProjectileDamage needleDamage = KoaleskBloodyStakeProjectile.GetComponent<ProjectileDamage>();
+            needleDamage.damageType = DamageType.Generic;
+
+            KoaleskBloodyStakeProjectile.AddComponent<ProjectileTargetComponent>();
+
+            ProjectileSteerTowardTarget needleSteer = KoaleskBloodyStakeProjectile.AddComponent<ProjectileSteerTowardTarget>();
+            needleSteer.yAxisOnly = false;
+            needleSteer.rotationSpeed = 700f;
+
+            ProjectileOverlapAttack needleLap = KoaleskBloodyStakeProjectile.GetComponent<ProjectileOverlapAttack>();
+            needleLap.impactEffect = LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/OmniEffect/OmniImpactExecute");
+            needleLap.resetInterval = 0.5f;
+            needleLap.overlapProcCoefficient = 0.75f;
+
+            ProjectileDirectionalTargetFinder needleFinder = KoaleskBloodyStakeProjectile.AddComponent<ProjectileDirectionalTargetFinder>();
+            needleFinder.lookRange = 35f;
+            needleFinder.lookCone = 110f;
+            needleFinder.targetSearchInterval = 0.2f;
+            needleFinder.onlySearchIfNoTarget = false;
+            needleFinder.allowTargetLoss = true;
+            needleFinder.testLoS = true;
+            needleFinder.ignoreAir = false;
+            needleFinder.flierAltitudeTolerance = Mathf.Infinity;
+
+
+            KoaleskBloodyStakeProjectile.AddComponent<DamageAPI.ModdedDamageTypeHolderComponent>();
+            KoaleskBloodyStakeProjectile.GetComponent<DamageAPI.ModdedDamageTypeHolderComponent>().Add(DamageTypes.KoaleskLiquorDamage);
+
+            ProjectileController projectileController = KoaleskBloodyStakeProjectile.GetComponent<ProjectileController>();
+            projectileController.procCoefficient = 1f;
+            KoaleskBloodyStakeGhost = LegacyResourcesAPI.Load<GameObject>("Prefabs/Projectiles/MageIceBombProjectile").GetComponent<ProjectileController>().ghostPrefab.InstantiateClone("NeedleGhost", false);
+            KoaleskBloodyStakeGhost.transform.GetChild(0).gameObject.SetActive(false);
+            KoaleskBloodyStakeGhost.transform.GetChild(1).gameObject.SetActive(false);
+            KoaleskBloodyStakeGhost.transform.GetChild(2).localScale = new Vector3(0.2f, 0.2f, 1.66f);
+            KoaleskBloodyStakeGhost.transform.GetChild(2).gameObject.GetComponent<MeshFilter>().mesh = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/ImpBoss/ImpVoidspikeProjectileGhost.prefab").WaitForCompletion().transform.GetChild(0).GetComponent<MeshFilter>().mesh;
+            KoaleskBloodyStakeGhost.transform.GetChild(2).gameObject.GetComponent<MeshRenderer>().material = Object.Instantiate(Addressables.LoadAssetAsync<Material>("RoR2/Base/Imp/matImpClaw.mat").WaitForCompletion());
+            KoaleskBloodyStakeGhost.transform.GetChild(3).gameObject.SetActive(false);
+            KoaleskBloodyStakeGhost.transform.GetChild(4).localScale = new Vector3(.2f, .2f, .2f);
+            KoaleskBloodyStakeGhost.transform.GetChild(4).GetChild(0).gameObject.GetComponent<TrailRenderer>().material = Object.Instantiate(Addressables.LoadAssetAsync<Material>("RoR2/Base/Imp/matImpPortalEffectEdge.mat").WaitForCompletion());
+            KoaleskBloodyStakeGhost.transform.GetChild(4).GetChild(1).gameObject.GetComponent<TrailRenderer>().material = Object.Instantiate(Addressables.LoadAssetAsync<Material>("RoR2/Base/Imp/matImpPortalEffectEdge.mat").WaitForCompletion());
+            KoaleskBloodyStakeGhost.transform.GetChild(4).GetChild(3).gameObject.SetActive(false);
+            KoaleskBloodyStakeGhost = KoaleskBloodyStakeGhost.InstantiateClone("NeedleGhost");
+            Object.Destroy(KoaleskBloodyStakeGhost.GetComponent<EffectComponent>());
+            if (KoaleskBloodyStakeGhost)
+                projectileController.ghostPrefab = KoaleskBloodyStakeGhost;
+            if (!projectileController.ghostPrefab.GetComponent<NetworkIdentity>())
+                projectileController.ghostPrefab.AddComponent<NetworkIdentity>();
+            if (!projectileController.ghostPrefab.GetComponent<ProjectileGhostController>())
+                projectileController.ghostPrefab.AddComponent<ProjectileGhostController>();
+            projectileController.startSound = "";
+
+            projectileController.ghostPrefab.GetComponent<VFXAttributes>().DoNotPool = true;
+
+            Modules.Content.AddProjectilePrefab(KoaleskBloodyStakeProjectile);
+
+            var BlightDot = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/MiniMushroom/SporeGrenadeProjectileDotZone.prefab").WaitForCompletion().InstantiateClone("KoaleskDotZoneBlightProjectile");
+            if (!BlightDot.GetComponent<NetworkIdentity>()) BlightDot.AddComponent<NetworkIdentity>();
+
+            BlightDot.transform.localScale *= 0.5f;
+
+            ProjectileDotZone dotZone = BlightDot.GetComponent<ProjectileDotZone>();
+            dotZone.damageCoefficient = 0f;
+            dotZone.lifetime = 5f;
+            dotZone.overlapProcCoefficient = 0f;
+
+            BlightDot.AddComponent<ModdedDamageTypeHolderComponent>().Add(DamageTypes.KoaleskBlightProjectileDamage);
+
+            Modules.Content.AddProjectilePrefab(BlightDot);
+
+            KoaleskBlightProjectilePrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/MiniMushroom/SporeGrenadeProjectile.prefab").WaitForCompletion().InstantiateClone("KoaleskBlightProjectile");
+            if (!BlightDot.GetComponent<NetworkIdentity>()) BlightDot.AddComponent<NetworkIdentity>();
+
+            ProjectileSimple ps = KoaleskBlightProjectilePrefab.GetComponent<ProjectileSimple>();
+
+            ps.desiredForwardSpeed = 0f;
+
+            ProjectileController pc = KoaleskBlightProjectilePrefab.GetComponent<ProjectileController>();
+
+            pc.procCoefficient = 0f;
+            pc.ghostPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/MiniMushroom/SporeGrenadeGhost.prefab").WaitForCompletion();
+
+            ProjectileImpactExplosion pie = KoaleskBlightProjectilePrefab.GetComponent<ProjectileImpactExplosion>();
+            pie.childrenProjectilePrefab = BlightDot;
+            pie.lifetime = 5f;
+
+            Modules.Content.AddProjectilePrefab(KoaleskBlightProjectilePrefab);
+
         }
         #endregion
 

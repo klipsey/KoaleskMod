@@ -11,67 +11,35 @@ AvatarMask:
   m_Elements:
   - m_Path: 
     m_Weight: 1
-  - m_Path: Koalesk
+  - m_Path: KoaleskBody
+    m_Weight: 0
+  - m_Path: KoaleskBone
+    m_Weight: 0
+  - m_Path: KoaleskCloth
+    m_Weight: 0
+  - m_Path: KoaleskDark
+    m_Weight: 0
+  - m_Path: KoaleskMetal
     m_Weight: 0
   - m_Path: KoaleskRig
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/MCH-ROT-neck/neck/MCH-ROT-head/head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008/PonyTail.009
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/tweak_spine.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/tweak_spine.003/ORG-spine.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/tweak_spine.003/ORG-spine.003/ORG-breast.L
-    m_Weight: 0
-  - m_Path: KoaleskRig/MCH-torso.parent/torso/MCH-spine.002/spine_fk.002/MCH-spine.003/spine_fk.003/tweak_spine.003/ORG-spine.003/ORG-breast.R
     m_Weight: 0
   - m_Path: KoaleskRig/root
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-butt.L
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-butt.R
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.L
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.R
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
     m_Weight: 0
@@ -205,6 +173,26 @@ AvatarMask:
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/Ornament
     m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008/PonyTail.009
+    m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/DEF-shin.L
@@ -213,24 +201,6 @@ AvatarMask:
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L/SkirtBone.L.004
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.001
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.001/SkirtBone.L.006
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.002
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.002/SkirtBone.L.008
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/SkirtParentThigh.L/SkirtBone.L.003/SkirtBone.L.010
-    m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R
@@ -238,24 +208,6 @@ AvatarMask:
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R/SkirtBone.R.004
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.001
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.001/SkirtBone.R.006
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.002
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.002/SkirtBone.R.008
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.003
-    m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/SkirtParentThigh.R/SkirtBone.R.003/SkirtBone.R.010
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/RopeBone
     m_Weight: 0
@@ -286,4 +238,38 @@ AvatarMask:
   - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012
     m_Weight: 0
   - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012/RopeBone.008
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L/SkirtBone.L.004
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.001
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.001/SkirtBone.L.006
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.002
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.002/SkirtBone.L.008
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.003
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.003/SkirtBone.L.010
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R/SkirtBone.R.004
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.001
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.001/SkirtBone.R.006
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.002
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.002/SkirtBone.R.008
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.003
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.003/SkirtBone.R.010
+    m_Weight: 0
+  - m_Path: KoaleskRose
     m_Weight: 0

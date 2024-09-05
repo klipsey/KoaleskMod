@@ -84,7 +84,7 @@ namespace KoaleskMod.KoaleskCharacter
                 },
                 new CustomRendererInfo
                 {
-                    childName = "TrimModel",
+                    childName = "TrimModel"
                 }
         };
 
@@ -264,13 +264,13 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texBloodyStake"),
 
-                activationState = new SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new SerializableEntityStateType(typeof(ChargeBloodyStake)),
 
                 activationStateMachineName = "Weapon",
-                interruptPriority = InterruptPriority.PrioritySkill,
+                interruptPriority = InterruptPriority.Skill,
 
-                baseMaxStock = 2,
-                baseRechargeInterval = 4f,
+                baseMaxStock = 1,
+                baseRechargeInterval = 5f,
                 rechargeStock = 1,
                 requiredStock = 1,
                 stockToConsume = 1,
@@ -278,12 +278,12 @@ namespace KoaleskMod.KoaleskCharacter
                 resetCooldownTimerOnUse = false,
                 fullRestockOnAssign = true,
                 dontAllowPastMaxStocks = false,
-                beginSkillCooldownOnSkillEnd = false,
-                mustKeyPress = false,
+                beginSkillCooldownOnSkillEnd = true,
+                mustKeyPress = true,
 
                 isCombatSkill = true,
                 canceledFromSprinting = false,
-                cancelSprintingOnActivation = false,
+                cancelSprintingOnActivation = true,
                 forceSprintDuringState = false,
             });
 
@@ -297,13 +297,13 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { Tokens.koaleskToughKeyword },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texGraveStake"),
 
-                activationState = new SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new SerializableEntityStateType(typeof(GraveStake)),
 
                 activationStateMachineName = "Weapon",
-                interruptPriority = InterruptPriority.PrioritySkill,
+                interruptPriority = InterruptPriority.Skill,
 
-                baseMaxStock = 2,
-                baseRechargeInterval = 4f,
+                baseMaxStock = 1,
+                baseRechargeInterval = 6f,
                 rechargeStock = 1,
                 requiredStock = 1,
                 stockToConsume = 1,
@@ -440,7 +440,7 @@ namespace KoaleskMod.KoaleskCharacter
                 skillNameToken = KOALESK_PREFIX + "SPECIAL_DEADNIGHT_NAME",
                 skillDescriptionToken = KOALESK_PREFIX + "SPECIAL_DEADNIGHT_DESCRIPTION",
                 keywordTokens = new string[] { },
-                skillIcon = assetBundle.LoadAsset<Sprite>("texDeadNight"),
+                skillIcon = assetBundle.LoadAsset<Sprite>("texDeadOfNight"),
 
                 activationState = new SerializableEntityStateType(typeof(RoseThorn)),
                 activationStateMachineName = "Weapon",
@@ -492,12 +492,12 @@ namespace KoaleskMod.KoaleskCharacter
             //currently not needed as with only 1 skin they will simply take the default meshes
             //uncomment this when you have another skin
             defaultSkin.meshReplacements = Modules.Skins.getMeshReplacements(assetBundle, defaultRendererinfos,
-                "meshBody",
-                "meshBones",
-                "meshEtheralHand",
-                "meshRose",
-                "meshSkirt",
-                "meshTrimming");
+                "KoaleskBody",
+                "KoaleskBone",
+                "KoaleskDark",
+                "KoaleskRose",
+                "KoaleskCloth",
+                "KoaleskMetal");
 
             //add new skindef to our list of skindefs. this is what we'll be passing to the SkinController
             /*
@@ -654,9 +654,12 @@ namespace KoaleskMod.KoaleskCharacter
                     attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
                 }
 
-                if (damageInfo.damage > 0 && !damageInfo.rejected && victimBody && attackerBody)
+                if (!damageInfo.rejected && victimBody)
                 {
-                    
+                    if (damageInfo.HasModdedDamageType(DamageTypes.KoaleskBlightProjectileDamage))
+                    {
+                        damageInfo.damage = self.fullCombinedHealth * 0.02f;
+                    }
                 }
             }
 

@@ -4,11 +4,6 @@ using KoaleskMod.Modules.BaseStates;
 using RoR2;
 using UnityEngine.AddressableAssets;
 using KoaleskMod.KoaleskCharacter.Content;
-using static R2API.DamageAPI;
-using UnityEngine.Networking;
-using R2API.Networking;
-using KoaleskMod.KoaleskCharacter.Components;
-using R2API.Networking.Interfaces;
 
 namespace KoaleskMod.KoaleskCharacter.SkillStates
 {
@@ -28,21 +23,21 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             damageType = DamageType.Generic;
             moddedDamageTypeHolder.Add(DamageTypes.KoaleskLiquorDamage);
-            damageCoefficient = KoaleskConfig.swingDamageCoefficient.Value;
+            damageCoefficient = swingIndex == 3 ? KoaleskConfig.swingLargeDamageCoefficient.Value : KoaleskConfig.swingDamageCoefficient.Value;
             procCoefficient = 1f;
-            pushForce = 300f;
+            pushForce = swingIndex == 3 ? 750 : 300f;
             bonusForce = Vector3.zero;
-            baseDuration = 1.1f + swingInterval * liquorStackCount;
+            baseDuration = swingIndex == 3 ? 1.75f + swingInterval * liquorStackCount : 1.1f + swingInterval * liquorStackCount;
 
             //0-1 multiplier of baseduration, used to time when the hitbox is out (usually based on the run time of the animation)
             //for example, if attackStartPercentTime is 0.5, the attack will start hitting halfway through the ability. if baseduration is 3 seconds, the attack will start happening at 1.5 seconds
-            attackStartPercentTime = 0.4f;
-            attackEndPercentTime = 0.6f;
+            attackStartPercentTime = swingIndex == 3 ? 0.5f : 0.4f;
+            attackEndPercentTime = swingIndex == 3 ? 0.75f : 0.6f;
 
             //this is the point at which the attack can be interrupted by itself, continuing a combo
-            earlyExitPercentTime = 0.8f;
+            earlyExitPercentTime = 0.85f;
 
-            hitStopDuration = 0.05f;
+            hitStopDuration = swingIndex == 3 ? 0.1f : 0.05f;
             attackRecoil = 2f / attackSpeedStat;
             hitHopVelocity = 4f;
 
@@ -52,9 +47,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             playbackRateParam = "Swing.playbackRate";
             swingEffectPrefab = KoaleskAssets.swordSwingEffect;
 
-            hitEffectPrefab = KoaleskAssets.swordHitEffect;
-
-            impactSound = KoaleskAssets.swordImpactSoundEvent.index;
+            hitEffectPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/OmniEffect/OmniImpactExecute");
 
             base.OnEnter();
 

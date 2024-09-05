@@ -22,6 +22,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static DamageAPI.ModdedDamageType KoaleskDarkThornDamage;
         public static DamageAPI.ModdedDamageType KoaleskLiquorDamage;
         public static DamageAPI.ModdedDamageType KoaleskBlightedDamage;
+        public static DamageAPI.ModdedDamageType KoaleskBlightProjectileDamage;
         internal static void Init()
         {
             Default = DamageAPI.ReserveDamageType();
@@ -46,7 +47,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
             CharacterBody victimBody = damageReport.victimBody;
             EntityStateMachine victimMachine = victimBody.GetComponent<EntityStateMachine>();
             CharacterBody attackerBody = damageReport.attackerBody;
-            if(attackerBody && damageReport.attacker)
+            if(damageReport.attacker)
             {
                 KoaleskController koaleskController = damageReport.attacker.GetComponent<KoaleskController>();
 
@@ -65,7 +66,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
                         }
                     }
 
-                    if (damageInfo.HasModdedDamageType(KoaleskDarkThornDamage) && victimBody)
+                    if (damageInfo.HasModdedDamageType(KoaleskDarkThornDamage) && victimBody && attackerBody)
                     {
                         PullEnemiesTowardsBody(attackerBody, victimBody, 25f);
                     }
@@ -107,6 +108,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
                 rigidBodyMotor.ApplyForceImpulse(physInfo);
                 return;
             }
+
+            //Can play vfx here maybe
         }
     }
 }

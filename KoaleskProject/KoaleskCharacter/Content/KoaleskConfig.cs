@@ -11,7 +11,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static ConfigEntry<float> swingDamageCoefficient;
         public static ConfigEntry<float> swingLargeDamageCoefficient;
         public static ConfigEntry<float> darkThornDamageCoefficient;
-        public static ConfigEntry<float> shoulderBashDamageCoefficient;
+        public static ConfigEntry<float> bloodyStakeDamageCoefficient;
         public static ConfigEntry<float> chargeDamageCoefficient;
         public static ConfigEntry<float> swordSlamDamageCoefficient;
         public static void Init()
@@ -37,7 +37,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             darkThornDamageCoefficient = Config.BindAndOptions(section2, "Dark Thorn Damage", 1.6f, "Change the damage coefficient of Dark Thorn.", false);
 
-            shoulderBashDamageCoefficient = Config.BindAndOptions(section2, "Shoulder Bash Damage", 2.4f, "Change the damage coefficient of Shoulder Bash.", false);
+            bloodyStakeDamageCoefficient = Config.BindAndOptions(section2, "Bloody Stake Damage", 0.5f, "Change the Bloody Stake Damage Coefficient.", false);
 
             chargeDamageCoefficient = Config.BindAndOptions(section2, "Charge Damage", 7f, "Change the damage coefficient of Shoulder Bash.", false);
         }

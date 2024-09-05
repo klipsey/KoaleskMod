@@ -58,18 +58,35 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                 // Define a small threshold value, like 0.1
                 float threshold = 0.1f;
 
-                if (movementInputDot >= -threshold)
+                if (skillLocator.primary && skillLocator.secondary && skillLocator.utility && skillLocator.special)
                 {
-                    if (skillLocator.primary)
+                    EntityStateMachine b = null;
+                    EntityStateMachine[] components = base.gameObject.GetComponents<EntityStateMachine>();
+                    for (int i = 0; i < components.Length; i++)
+                    {
+                        if (components[i].customName == "Weapon")
+                        {
+                            b = components[i];
+
+                            break;
+                        }
+                    }
+                    if (movementInputDot >= -threshold)
                     {
                         skillLocator.primary.UnsetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        skillLocator.secondary.UnsetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        skillLocator.utility.UnsetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        skillLocator.special.UnsetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
                     }
-                }
-                else
-                {
-                    if (skillLocator.primary)
+                    else
                     {
-                        skillLocator.primary.SetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        if(b && !(b.state is ChargeBloodyStake) && !(b.state is FireBloodyStake))
+                        {
+                            skillLocator.primary.SetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                            skillLocator.secondary.SetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                            skillLocator.utility.SetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                            skillLocator.special.SetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        }
                     }
                 }
             }

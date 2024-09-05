@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31257a516fcbae341acdbb183a1596cd
+guid: dd27d5ad6d8e35a4aa0e07531b8f51c5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -46,8 +46,7 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: "Invalid copied Avatar Rig Configuration:\n\tNo human bone found.
-      Ensure both rig type match\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
