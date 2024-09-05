@@ -4,6 +4,7 @@ using EntityStates;
 using BepInEx.Configuration;
 using KoaleskMod.Modules;
 using KoaleskMod.KoaleskCharacter.Components;
+using KoaleskMod.KoaleskCharacter.Content;
 
 namespace KoaleskMod.KoaleskCharacter.SkillStates
 {
@@ -16,6 +17,18 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             base.OnEnter();
             this.animator = this.modelAnimator;
             this.FindLocalUser();
+        }
+        private void CheckEmote<T>(ConfigEntry<KeyboardShortcut> keybind) where T : EntityState, new()
+        {
+            if (Modules.Config.GetKeyPressed(keybind))
+            {
+                FindLocalUser();
+
+                if (localUser != null && !localUser.isUIFocused)
+                {
+                    outer.SetInterruptState(new T(), InterruptPriority.Any);
+                }
+            }
         }
         private void FindLocalUser()
         {
@@ -47,6 +60,11 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
                 if (this.isGrounded) this.animator.SetFloat("airBlend", 0f);
                 else this.animator.SetFloat("airBlend", 1f);
+            }
+
+            if (base.isAuthority && base.characterMotor.isGrounded)
+            {
+                this.CheckEmote<PoleDance>(KoaleskConfig.restKey);
             }
 
             if (inputBank && characterBody && characterBody.skillLocator)

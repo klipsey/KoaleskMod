@@ -22,10 +22,14 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
         public override void OnEnter()
         {
             base.OnEnter();
+
+            PlayCrossfade("Gesture, Override", "Cast", 0.05f);
         }
 
         public override void FixedUpdate()
         {
+            StartAimMode(GetAimRay(), 2f);
+
             float stacksAvailable = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
 
             base.FixedUpdate();
@@ -81,6 +85,8 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             }
 
             base.OnExit();
+
+            PlayCrossfade("Gesture, Override", "BufferEmpty", 0f);
         }
         public override InterruptPriority GetMinimumInterruptPriority()
         {

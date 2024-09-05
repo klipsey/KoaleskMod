@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3243509281
+CRC: 3350000895
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3413c6181f81b72677de9ea5dec6a300
+    Hash: 9e95d2dc78070607e01c8f09bd34a7e3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8d042481834878ddf59c583a193445cc
@@ -64,9 +64,10 @@ Assets:
 - Assets/Koalesk/Materials/MAT_Glow.mat
 - Assets/Koalesk/Materials/matBone.mat
 - Assets/Koalesk/Textures/TXT_Fire_01.tga
-- Assets/Koalesk/Materials/DarkThornProjectileMaterial.mat
+- Assets/Koalesk/koalesk_emoteskeleton.prefab
 - Assets/Koalesk/Icons/Buffs/IconBloodliquor.png
 - Assets/Koalesk/Textures/texTrimmingDiffuse.png
+- Assets/Koalesk/Materials/DarkThornProjectileMaterial.mat
 - Assets/Koalesk/Materials/MAT_Fire_Add.mat
 - Assets/Koalesk/HUD/Textures/texChargeRing.png
 - Assets/Koalesk/KoaleskDisplay.prefab
@@ -116,7 +117,6 @@ Assets:
 - Assets/Koalesk/Meshes/KoaleskBone.mesh
 - Assets/Koalesk/Animations/maskKoaleskGesture.mask
 - Assets/Koalesk/HUD/WeaponChargeBar.prefab
-- Assets/Koalesk/koalesk_emoteskeleton.prefab
 - Assets/Koalesk/Icons/Skill/texScarletGarden.png
 - Assets/Koalesk/VFX/New VFX.vfx
 - Assets/Koalesk/Icons/Skill/texShadowDance.png

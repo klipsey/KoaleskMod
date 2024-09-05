@@ -34,6 +34,8 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             stopwatch = delay;
 
             base.OnEnter();
+
+            StartAimMode(GetAimRay(), 2f);
         }
 
         public override void FixedUpdate()

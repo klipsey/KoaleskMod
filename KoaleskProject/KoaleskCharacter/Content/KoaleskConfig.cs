@@ -1,5 +1,6 @@
 ﻿using BepInEx.Configuration;
 using KoaleskMod.Modules;
+using UnityEngine;
 
 namespace KoaleskMod.KoaleskCharacter.Content
 {
@@ -14,11 +15,14 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static ConfigEntry<float> bloodyStakeDamageCoefficient;
         public static ConfigEntry<float> chargeDamageCoefficient;
         public static ConfigEntry<float> swordSlamDamageCoefficient;
+
+        public static ConfigEntry<KeyboardShortcut> restKey;
+
         public static void Init()
         {
             string section = "01 - General";
             string section2 = "02 - Stats";
-
+            string section3 = "03 - Keybinds";
             //add more here or else you're cringe
             forceUnlock = Config.BindAndOptions(
                 section,
@@ -40,6 +44,9 @@ namespace KoaleskMod.KoaleskCharacter.Content
             bloodyStakeDamageCoefficient = Config.BindAndOptions(section2, "Bloody Stake Damage", 0.5f, "Change the Bloody Stake Damage Coefficient.", false);
 
             chargeDamageCoefficient = Config.BindAndOptions(section2, "Charge Damage", 7f, "Change the damage coefficient of Shoulder Bash.", false);
+
+            restKey = Config.BindAndOptions(section3, "Rest Emote", new KeyboardShortcut(KeyCode.Alpha1), "Key used to Rest");
+
         }
     }
 }
