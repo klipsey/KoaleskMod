@@ -25,251 +25,251 @@ AvatarMask:
     m_Weight: 0
   - m_Path: KoaleskRig/root
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine
+  - m_Path: KoaleskRig/root/DEF-spine.001
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-butt.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-butt.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-butt.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L/DEF-f_index.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-palm.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L/DEF-thumb.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L/DEF-f_middle.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-palm.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L/DEF-f_ring.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-palm.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-palm.04.L
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R/DEF-f_index.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-palm.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R/DEF-thumb.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R/DEF-f_middle.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-palm.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R/DEF-f_ring.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-palm.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-palm.04.R
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002/WeaponSmear.003
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002/WeaponSmear.003/WeaponSmear.004
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/Ornament
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008/PonyTail.009
-    m_Weight: 1
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-butt.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/DEF-shin.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.L/DEF-shin.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.L/DEF-shin.L/DEF-foot.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.R/DEF-shin.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.001
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.001/RopeBone.013
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.001
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.001/RopeBone.013/RopeBone.015
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.001/RopeBone.013
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.002
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.001/RopeBone.013/RopeBone.015
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.002/RopeBone.014
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.002
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.002/RopeBone.014/RopeBone.016
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.002/RopeBone.014
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.003
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.002/RopeBone.014/RopeBone.016
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.003/RopeBone.004
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.003
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.003/RopeBone.004/RopeBone.010
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.003/RopeBone.004
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.003/RopeBone.004/RopeBone.010/RopeBone.007
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.003/RopeBone.004/RopeBone.010
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.003/RopeBone.004/RopeBone.010/RopeBone.007
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005/RopeBone.006
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.005
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.005/RopeBone.006
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012/RopeBone.008
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/RopeBone/RopeBone.005/RopeBone.006/RopeBone.012/RopeBone.008
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L/SkirtBone.L.004
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.001
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L/SkirtBone.L.004
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.001/SkirtBone.L.006
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.001
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.002
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.001/SkirtBone.L.006
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.002/SkirtBone.L.008
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.002
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.003
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.002/SkirtBone.L.008
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.L.003/SkirtBone.L.010
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.003
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.L.003/SkirtBone.L.010
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R/SkirtBone.R.004
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.001
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R/SkirtBone.R.004
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.001/SkirtBone.R.006
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.001
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.002
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.001/SkirtBone.R.006
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.002/SkirtBone.R.008
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.002
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.003
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.002/SkirtBone.R.008
     m_Weight: 0
-  - m_Path: KoaleskRig/root/DEF-spine/SkirtBone.R.003/SkirtBone.R.010
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.003
     m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine/SkirtBone.R.003/SkirtBone.R.010
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002
+    m_Weight: 0
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-breast.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L/DEF-f_index.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-palm.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L/DEF-thumb.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.01.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.02.L/DEF-palm.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.03.L/DEF-palm.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/ORG-palm.04.L/DEF-palm.04.L
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R/DEF-f_index.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-palm.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R/DEF-thumb.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.01.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.02.R/DEF-palm.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.03.R/DEF-palm.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/ORG-palm.04.R/DEF-palm.04.R
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002/WeaponSmear.003
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/WeaponGrabPoint/WeaponGrabOffset/WeaponBlade/WeaponSmear/WeaponSmear.001/WeaponSmear.002/WeaponSmear.003/WeaponSmear.004
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/Ornament
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008
+    m_Weight: 1
+  - m_Path: KoaleskRig/root/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-neck/DEF-head/PonyTail/PonyTail.001/PonyTail.002/PonyTail.003/PonyTail.004/PonyTail.005/PonyTail.006/PonyTail.007/PonyTail.008/PonyTail.009
+    m_Weight: 1
   - m_Path: KoaleskRose
     m_Weight: 0

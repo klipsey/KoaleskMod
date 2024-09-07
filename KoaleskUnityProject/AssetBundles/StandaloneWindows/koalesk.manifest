@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3350000895
+CRC: 2093766545
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9e95d2dc78070607e01c8f09bd34a7e3
+    Hash: 21e5c5a863a63a8617d04f4895c00179
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8d042481834878ddf59c583a193445cc
@@ -64,11 +64,12 @@ Assets:
 - Assets/Koalesk/Materials/MAT_Glow.mat
 - Assets/Koalesk/Materials/matBone.mat
 - Assets/Koalesk/Textures/TXT_Fire_01.tga
-- Assets/Koalesk/koalesk_emoteskeleton.prefab
-- Assets/Koalesk/Icons/Buffs/IconBloodliquor.png
-- Assets/Koalesk/Textures/texTrimmingDiffuse.png
+- Assets/Koalesk/Meshes/KoaleskCloth.mesh
 - Assets/Koalesk/Materials/DarkThornProjectileMaterial.mat
+- Assets/Koalesk/Icons/Buffs/IconBloodliquor.png
+- Assets/Koalesk/Meshes/KoaleskBody.mesh
 - Assets/Koalesk/Materials/MAT_Fire_Add.mat
+- Assets/Koalesk/Textures/texTrimmingDiffuse.png
 - Assets/Koalesk/HUD/Textures/texChargeRing.png
 - Assets/Koalesk/KoaleskDisplay.prefab
 - Assets/Koalesk/Materials/matBody.mat
@@ -84,37 +85,36 @@ Assets:
 - Assets/Koalesk/Animations/animKoalesk.controller
 - Assets/Koalesk/HUD/Textures/texWhite.png
 - Assets/Koalesk/Materials/matRose.mat
-- Assets/Koalesk/Meshes/KoaleskRose.mesh
 - Assets/Koalesk/Materials/MAT_Fire_Alpha.mat
 - Assets/Koalesk/Icons/texMonsoonSkin.png
 - Assets/Koalesk/VFX/PS_Parent.prefab
 - Assets/Koalesk/HUD/Textures/texBulletIndicator.png
 - Assets/Koalesk/Icons/Skill/texDeadOfNight.png
-- Assets/Koalesk/Meshes/KoaleskDark.mesh
 - Assets/Koalesk/HUD/Textures/texSniperBulletIndicator.png
 - Assets/Koalesk/Icons/Skill/texDarkThorn.png
 - Assets/Koalesk/Icons/KoaleskIcon.png
-- Assets/Koalesk/Meshes/KoaleskMetal.mesh
 - Assets/Koalesk/Icons/Skill/texGraveStake.png
 - Assets/Koalesk/Textures/TXT_Sparks_01.tga
-- Assets/Koalesk/Meshes/KoaleskBody.mesh
+- Assets/Koalesk/Textures/texHandDiffuse.png
 - Assets/Koalesk/Icons/koaleskIconNoBorder.png
 - Assets/Koalesk/Textures/texRoseDiffuse.png
-- Assets/Koalesk/Textures/texHandDiffuse.png
 - Assets/Koalesk/Icons/Skill/texRoseThorn.png
+- Assets/Koalesk/koalesk_emoteskeleton.prefab
+- Assets/Koalesk/Meshes/KoaleskDark.mesh
 - Assets/Koalesk/Animations/animKoaleskCSS.controller
 - Assets/Koalesk/Icons/Buffs/IconDarkblight.png
 - Assets/Koalesk/Icons/Skill/texFlowerDance.png
 - Assets/Koalesk/mdlKoalesk.prefab
+- Assets/Koalesk/Meshes/KoaleskMetal.mesh
 - Assets/Koalesk/Icons/texDefaultSkin.png
 - Assets/Koalesk/Animations/animKoaleskEmotes.controller
 - Assets/Koalesk/Materials/MAT_Sparks.mat
+- Assets/Koalesk/Meshes/KoaleskRose.mesh
 - Assets/Koalesk/Animations/maskKoaleskLeftArm.mask
 - Assets/Koalesk/Textures/texCloudPixel2.png
 - Assets/Koalesk/Animations/maskKoaleskAim.mask
-- Assets/Koalesk/Meshes/KoaleskCloth.mesh
-- Assets/Koalesk/Textures/texBoneDiffuse.png
 - Assets/Koalesk/Meshes/KoaleskBone.mesh
+- Assets/Koalesk/Textures/texBoneDiffuse.png
 - Assets/Koalesk/Animations/maskKoaleskGesture.mask
 - Assets/Koalesk/HUD/WeaponChargeBar.prefab
 - Assets/Koalesk/Icons/Skill/texScarletGarden.png

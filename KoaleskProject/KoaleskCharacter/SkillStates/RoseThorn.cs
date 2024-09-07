@@ -13,21 +13,27 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
         private static float swingInterval = 0.1f;
         private float liquorStackCount;
         private float intervalStopwatch;
+        private bool secondHit;
         public override void OnEnter()
         {
             RefreshState();
 
             liquorStackCount = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
 
-            hitboxGroupName = swingIndex == 3 ? "BigMeleeHitbox" : "MeleeHitbox";
+            hitboxGroupName = swingIndex == 2 ? "BigMeleeHitbox" : "MeleeHitbox";
 
             damageType = DamageType.Generic;
             moddedDamageTypeHolder.Add(DamageTypes.KoaleskLiquorDamage);
-            damageCoefficient = swingIndex == 3 ? KoaleskConfig.swingLargeDamageCoefficient.Value : KoaleskConfig.swingDamageCoefficient.Value;
+            damageCoefficient = swingIndex == 2 ? KoaleskConfig.swingLargeDamageCoefficient.Value : KoaleskConfig.swingDamageCoefficient.Value;
             procCoefficient = 1f;
-            pushForce = swingIndex == 3 ? 750 : 300f;
+            pushForce = swingIndex == 2 ? 750 : 300f;
             bonusForce = Vector3.zero;
-            baseDuration = swingIndex == 3 ? 1.75f + swingInterval * liquorStackCount : 1.1f + swingInterval * liquorStackCount;
+            baseDuration = swingIndex == 2 ? 1.75f + swingInterval * liquorStackCount : 1.1f + swingInterval * liquorStackCount;
+
+            if(swingInterval == 1)
+            {
+                baseDuration += 0.1f;
+            }
 
             //0-1 multiplier of baseduration, used to time when the hitbox is out (usually based on the run time of the animation)
             //for example, if attackStartPercentTime is 0.5, the attack will start hitting halfway through the ability. if baseduration is 3 seconds, the attack will start happening at 1.5 seconds
@@ -37,7 +43,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             //this is the point at which the attack can be interrupted by itself, continuing a combo
             earlyExitPercentTime = 0.85f;
 
-            hitStopDuration = swingIndex == 3 ? 0.1f : 0.05f;
+            hitStopDuration = swingIndex == 2 ? 0.1f : 0.05f;
             attackRecoil = 2f / attackSpeedStat;
             hitHopVelocity = 4f;
 
@@ -60,9 +66,25 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             if(hasFired)
             {
-                intervalStopwatch += Time.deltaTime;
+                intervalStopwatch += Time.fixedDeltaTime;
 
-                if(intervalStopwatch >= swingInterval && liquorStackCount > 0)
+                if(intervalStopwatch >= swingInterval && swingIndex == 1 && !secondHit) 
+                {
+                    secondHit = true;
+                    intervalStopwatch = 0;
+
+                    attack.ignoredHealthComponentList.Clear();
+
+                    Util.PlayAttackSpeedSound(swingSoundString, gameObject, attackSpeedStat);
+
+                    PlaySwingEffect();
+
+                    FireAttack();
+
+                    return;
+                }
+
+                if (intervalStopwatch >= swingInterval && liquorStackCount > 0)
                 {
                     attack.ignoredHealthComponentList.Clear();
 

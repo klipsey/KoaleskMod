@@ -23,18 +23,24 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
         {
             base.OnEnter();
 
-            PlayCrossfade("Gesture, Override", "Cast", 0.05f);
+            characterMotor.Motor.ForceUnground();
+
+            SmallHop(characterMotor, 1f);
+
+            PlayCrossfade("Fullbody, Override", "CastCharge", 0.05f);
         }
 
         public override void FixedUpdate()
         {
+            base.FixedUpdate();
+
             StartAimMode(GetAimRay(), 2f);
 
             float stacksAvailable = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
 
-            base.FixedUpdate();
+            characterMotor.velocity.y = 0f;
 
-            stopwatch += Time.deltaTime;
+            stopwatch += Time.fixedDeltaTime;
 
             if (stopwatch >= stackConsumptionDuration && stacksAvailable > 0)
             {
@@ -45,6 +51,19 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
                     var stakeProjectileVFX = UnityEngine.Object.Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube));
                     vfxCreated.Add(stakeProjectileVFX);
+                }
+            }
+
+            if (vfxCreated != null && vfxCreated.Count > 0)
+            {
+                var vfxDistributionPoints = Modules.Helpers.DistributePointsEvenlyOnSphereCap(2.5f, vfxCreated.Count, characterBody.corePosition + inputBank.aimDirection, Quaternion.identity);
+
+                foreach (var vfx in vfxCreated.Select((value, i) => new { i, value }))
+                {
+                    var value = vfx.value;
+                    var index = vfx.i;
+                    value.transform.position = vfxDistributionPoints[index];
+                    value.transform.rotation = RoR2.Util.QuaternionSafeLookRotation(inputBank.aimDirection);
                 }
             }
 
@@ -59,19 +78,6 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
         public override void Update()
         {
             base.Update();
-
-            if (vfxCreated != null && vfxCreated.Count > 0)
-            {
-                var vfxDistributionPoints = Modules.Helpers.DistributePointsEvenlyOnSphereCap(2.5f, vfxCreated.Count, characterBody.corePosition + inputBank.aimDirection, Quaternion.identity);
-
-                foreach (var vfx in vfxCreated.Select((value, i) => new {i, value}))
-                {
-                    var value = vfx.value;
-                    var index = vfx.i;
-                    value.transform.position = vfxDistributionPoints[index];
-                    value.transform.rotation = RoR2.Util.QuaternionSafeLookRotation(inputBank.aimDirection);
-                }
-            }
         }
 
         public override void OnExit()
@@ -85,8 +91,6 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             }
 
             base.OnExit();
-
-            PlayCrossfade("Gesture, Override", "BufferEmpty", 0f);
         }
         public override InterruptPriority GetMinimumInterruptPriority()
         {

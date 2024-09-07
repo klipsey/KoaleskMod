@@ -143,24 +143,10 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             KoaleskBloodyStakeProjectile.AddComponent<ProjectileTargetComponent>();
 
-            ProjectileSteerTowardTarget needleSteer = KoaleskBloodyStakeProjectile.AddComponent<ProjectileSteerTowardTarget>();
-            needleSteer.yAxisOnly = false;
-            needleSteer.rotationSpeed = 700f;
-
             ProjectileOverlapAttack needleLap = KoaleskBloodyStakeProjectile.GetComponent<ProjectileOverlapAttack>();
             needleLap.impactEffect = LegacyResourcesAPI.Load<GameObject>("Prefabs/Effects/OmniEffect/OmniImpactExecute");
             needleLap.resetInterval = 0.5f;
             needleLap.overlapProcCoefficient = 0.75f;
-
-            ProjectileDirectionalTargetFinder needleFinder = KoaleskBloodyStakeProjectile.AddComponent<ProjectileDirectionalTargetFinder>();
-            needleFinder.lookRange = 35f;
-            needleFinder.lookCone = 110f;
-            needleFinder.targetSearchInterval = 0.2f;
-            needleFinder.onlySearchIfNoTarget = false;
-            needleFinder.allowTargetLoss = true;
-            needleFinder.testLoS = true;
-            needleFinder.ignoreAir = false;
-            needleFinder.flierAltitudeTolerance = Mathf.Infinity;
 
 
             KoaleskBloodyStakeProjectile.AddComponent<DamageAPI.ModdedDamageTypeHolderComponent>();
