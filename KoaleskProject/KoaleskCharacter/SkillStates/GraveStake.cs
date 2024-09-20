@@ -13,11 +13,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
     {
         public static GameObject clawTracer = Addressables.LoadAssetAsync<GameObject>("RoR2/DLC1/Railgunner/TracerRailgunCryo.prefab").WaitForCompletion();
         private GameObject swingInstance;
-        private int blightStacks;
+        private bool hasBlight;
         public override void OnEnter()
         {
-            blightStacks = characterBody.GetBuffCount(KoaleskBuffs.koaleskBlightBuff);
-
             RefreshState();
             hitboxGroupName = "DarkThornHitbox";
 
@@ -52,7 +50,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             base.OnEnter();
 
-            koaleskController.ConsumeBlight();
+            hasBlight = characterBody.HasBuff(KoaleskBuffs.koaleskBlightBuff);
+
+            if(hasBlight) koaleskController.ConsumeBlight(characterBody.GetBuffCount(KoaleskBuffs.koaleskBlightBuff) - 1);
         }
 
         protected override void OnHitEnemyAuthority()
@@ -76,12 +76,12 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     damageColorIndex = DamageColorIndex.Default,
                     damageType = DamageType.Generic,
                     falloffModel = BulletAttack.FalloffModel.None,
-                    force = 700f + (blightStacks * 250),
+                    force = 700f + (hasBlight ? 700f : 0f),
                     HitEffectNormal = false,
                     procChainMask = default(ProcChainMask),
                     procCoefficient = procCoefficient,
                     maxDistance = 10f,
-                    radius = 4f + blightStacks,
+                    radius = 4f + (hasBlight ? 4f : 0f),
                     isCrit = RollCrit(),
                     muzzleName = "SwingMuzzle3",
                     minSpread = 0f,
@@ -93,7 +93,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     hitMask = (int)LayerIndex.world.mask | (int)LayerIndex.entityPrecise.mask,
                     stopperMask = LayerIndex.world.mask
                 };
-                bulletAttack.AddModdedDamageType(DamageTypes.KoaleskBlightedDamage);
+                bulletAttack.AddModdedDamageType(DamageTypes.KoaleskBlightDamage);
 
                 bulletAttack.Fire();
 

@@ -35,6 +35,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
         internal static GameObject dashEffect;
 
         internal static GameObject KoaleskHealEffect;
+        internal static GameObject specialSlashingEffect;
         //Models
         //Projectiles
         internal static GameObject KoaleskBlightProjectilePrefab;
@@ -43,6 +44,9 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
         internal static GameObject KoaleskBloodyStakeProjectile;
         internal static GameObject KoaleskBloodyStakeGhost;
+
+        internal static GameObject KoaleskGardenFlower;
+
         //Sounds
         internal static NetworkSoundEventDef swordImpactSoundEvent;
 
@@ -95,6 +99,17 @@ namespace KoaleskMod.KoaleskCharacter.Content
             KoaleskHealEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/DLC1/EliteEarth/AffixEarthHealExplosion.prefab").WaitForCompletion().InstantiateClone("KoaleskLiquorHeal");
 
             Modules.Content.CreateAndAddEffectDef(KoaleskHealEffect);
+
+            specialSlashingEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Merc/EvisOverlapProjectileGhost.prefab").WaitForCompletion().InstantiateClone("UnforgivenSpecialSlash");
+            if (!specialSlashingEffect.GetComponent<NetworkIdentity>()) specialSlashingEffect.AddComponent<NetworkIdentity>();
+            Component.Destroy(specialSlashingEffect.GetComponent<ProjectileGhostController>());
+
+            Object.Destroy(specialSlashingEffect.transform.Find("Point Light").gameObject);
+
+            EffectComponent ec2 = specialSlashingEffect.AddComponent<EffectComponent>();
+            ec2.applyScale = true;
+
+            Modules.Content.CreateAndAddEffectDef(specialSlashingEffect);
 
             dashEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Brother/BrotherDashEffect.prefab").WaitForCompletion().InstantiateClone("KoaleskDashEffect");
             dashEffect.AddComponent<NetworkIdentity>();
@@ -211,6 +226,15 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             Modules.Content.AddProjectilePrefab(KoaleskBlightProjectilePrefab);
 
+            KoaleskGardenFlower = PrefabAPI.InstantiateClone(LegacyResourcesAPI.Load<GameObject>("Prefabs/Projectiles/LightningStake"), "KoaleskFlowerProjectile");
+
+            ModdedDamageTypeHolderComponent mdthc = KoaleskGardenFlower.AddComponent<ModdedDamageTypeHolderComponent>();
+            mdthc.Add(DamageTypes.KoaleskGardenDamage);
+
+            pie = KoaleskGardenFlower.GetComponent<ProjectileImpactExplosion>();
+            pie.blastProcCoefficient = 0f;
+
+            Modules.Content.AddProjectilePrefab(KoaleskGardenFlower);
         }
         #endregion
 

@@ -38,11 +38,11 @@ namespace KoaleskMod.KoaleskCharacter.Components
         }
         private void FixedUpdate()
         {
-            if(characterBody.HasBuff(KoaleskBuffs.koaleskLiquorBuff))
+            if (characterBody.HasBuff(KoaleskBuffs.koaleskLiquorBuff))
             {
                 liquorDecayTimer -= Time.fixedDeltaTime;
 
-                if(liquorDecayTimer <= 0) 
+                if (liquorDecayTimer <= 0)
                 {
                     if (NetworkServer.active)
                     {
@@ -59,16 +59,17 @@ namespace KoaleskMod.KoaleskCharacter.Components
                     liquorDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value;
                 }
             }
+            else liquorDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value * 2f;
 
-            if(characterBody.HasBuff(KoaleskBuffs.koaleskBlightBuff))
+            if (characterBody.HasBuff(KoaleskBuffs.koaleskBlightBuff))
             {
                 blightDecayTimer -= Time.fixedDeltaTime;
 
-                if(blightDecayTimer <= 0)
+                if (blightDecayTimer <= 0)
                 {
                     if (NetworkServer.active) characterBody.RemoveBuff(KoaleskBuffs.koaleskBlightBuff);
 
-                    if(hasAuthority)
+                    if (hasAuthority)
                     {
                         ProjectileManager.instance.FireProjectile(blightProjectilePrefab, characterBody.footPosition, Quaternion.identity, null, 0f, 0f, false, DamageColorIndex.Default, null);
                     }
@@ -76,38 +77,40 @@ namespace KoaleskMod.KoaleskCharacter.Components
                     blightDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value;
                 }
             }
+            else blightDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value * 2f;
         }
-        public void AddBuffResetDecay(BuffDef buff)
+        public void AddBuffResetDecay(BuffDef buff, bool resetDecay = false)
         {
             if(NetworkServer.active)
             {
                 characterBody.AddBuff(buff);
 
-                if (buff.buffIndex == KoaleskBuffs.koaleskLiquorBuff.buffIndex)
+                if(resetDecay)
                 {
-                    liquorDecayTimer = KoaleskConfig.buffDecayDelay.Value;
-                }
+                    if (buff.buffIndex == KoaleskBuffs.koaleskLiquorBuff.buffIndex)
+                    {
+                        liquorDecayTimer = KoaleskConfig.buffDecayDelay.Value;
+                    }
 
-                if (buff.buffIndex == KoaleskBuffs.koaleskBlightBuff.buffIndex)
-                {
-                    blightDecayTimer = KoaleskConfig.buffDecayDelay.Value;
+                    if (buff.buffIndex == KoaleskBuffs.koaleskBlightBuff.buffIndex)
+                    {
+                        blightDecayTimer = KoaleskConfig.buffDecayDelay.Value;
+                    }
                 }
             }
         }
-        public void ConsumeBloodLiquor()
+        public void ConsumeBloodLiquor(int buffCount = 0)
         {
             if(NetworkServer.active)
             {
-                characterBody.SetBuffCount(KoaleskBuffs.koaleskLiquorBuff.buffIndex, 0);
-                liquorDecayTimer = KoaleskConfig.buffDecayDelay.Value;
+                characterBody.SetBuffCount(KoaleskBuffs.koaleskLiquorBuff.buffIndex, buffCount);
             }
         }
-        public void ConsumeBlight()
+        public void ConsumeBlight(int buffCount = 0)
         {
             if(NetworkServer.active)
             {
-                characterBody.SetBuffCount(KoaleskBuffs.koaleskBlightBuff.buffIndex, 0);
-                blightDecayTimer = KoaleskConfig.buffDecayDelay.Value;
+                characterBody.SetBuffCount(KoaleskBuffs.koaleskBlightBuff.buffIndex, buffCount);
             }
         }
         private void OnDestroy()

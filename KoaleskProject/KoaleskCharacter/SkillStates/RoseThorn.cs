@@ -11,14 +11,13 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
     {
         private GameObject swingInstance;
         private static float swingInterval = 0.1f;
-        private float liquorStackCount;
         private float intervalStopwatch;
         private bool secondHit;
+        private bool hasBloodLiquor;
+        private bool hasFiredBloodLiquor;
         public override void OnEnter()
         {
             RefreshState();
-
-            liquorStackCount = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
 
             hitboxGroupName = swingIndex == 2 ? "BigMeleeHitbox" : "MeleeHitbox";
 
@@ -26,9 +25,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             moddedDamageTypeHolder.Add(DamageTypes.KoaleskLiquorDamage);
             damageCoefficient = swingIndex == 2 ? KoaleskConfig.swingLargeDamageCoefficient.Value : KoaleskConfig.swingDamageCoefficient.Value;
             procCoefficient = 1f;
-            pushForce = swingIndex == 2 ? 750 : 300f;
+            pushForce = swingIndex == 2 ? 750f : 300f;
             bonusForce = Vector3.zero;
-            baseDuration = swingIndex == 2 ? 1.75f + swingInterval * liquorStackCount : 1.1f + swingInterval * liquorStackCount;
+            baseDuration = swingIndex == 2 ? 1.75f + swingInterval : 1.1f + swingInterval;
 
             if(swingInterval == 1)
             {
@@ -57,7 +56,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             base.OnEnter();
 
-            koaleskController.ConsumeBloodLiquor();
+            hasBloodLiquor = characterBody.HasBuff(KoaleskBuffs.koaleskLiquorBuff);
+
+            if(hasBloodLiquor) koaleskController.ConsumeBloodLiquor(characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff) - 1);
         }
 
         public override void FixedUpdate()
@@ -68,9 +69,29 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             {
                 intervalStopwatch += Time.fixedDeltaTime;
 
-                if(intervalStopwatch >= swingInterval && swingIndex == 1 && !secondHit) 
+                if (intervalStopwatch >= swingInterval && hasBloodLiquor && !hasFiredBloodLiquor)
+                {
+                    hasFiredBloodLiquor = true;
+
+                    attack.ignoredHealthComponentList.Clear();
+
+                    intervalStopwatch = 0;
+
+                    Util.PlayAttackSpeedSound(swingSoundString, gameObject, attackSpeedStat);
+
+                    PlaySwingEffect();
+
+                    FireAttack();
+                    
+                    return;
+                }
+
+                if (intervalStopwatch >= swingInterval && swingIndex == 1 && !secondHit) 
                 {
                     secondHit = true;
+
+                    if (hasBloodLiquor) hasFiredBloodLiquor = false;
+
                     intervalStopwatch = 0;
 
                     attack.ignoredHealthComponentList.Clear();
@@ -82,20 +103,6 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     FireAttack();
 
                     return;
-                }
-
-                if (intervalStopwatch >= swingInterval && liquorStackCount > 0)
-                {
-                    attack.ignoredHealthComponentList.Clear();
-
-                    liquorStackCount--;
-                    intervalStopwatch = 0;
-
-                    Util.PlayAttackSpeedSound(swingSoundString, gameObject, attackSpeedStat);
-
-                    PlaySwingEffect();
-
-                    FireAttack();
                 }
             }
         }
@@ -129,7 +136,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
         protected override void PlayAttackAnimation()
         {
-            if(inputBank.moveVector.magnitude == 0) PlayCrossfade("FullBody, Override", "Swing" + (1 + swingIndex), playbackRateParam, duration, duration * 0.05f);
+            if(inputBank.moveVector.magnitude == 0) PlayCrossfade("Gesture, Override", "Swing" + (1 + swingIndex), playbackRateParam, duration, duration * 0.05f);
             else PlayCrossfade("Gesture, Override", "Swing" + (1 + swingIndex), playbackRateParam, duration, duration * 0.05f);
         }
 

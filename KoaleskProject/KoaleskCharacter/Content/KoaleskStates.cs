@@ -16,8 +16,13 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             Modules.Content.AddEntityState(typeof(ChargeBloodyStake));
             Modules.Content.AddEntityState(typeof(FireBloodyStake));
-
             Modules.Content.AddEntityState(typeof(GraveStake));
+
+            Modules.Content.AddEntityState(typeof(FlowerDance));
+            Modules.Content.AddEntityState(typeof(ShadowDance));
+
+            Modules.Content.AddEntityState(typeof(ScarletGarden));
+            Modules.Content.AddEntityState(typeof(DeadNight));
         }
     }
 }

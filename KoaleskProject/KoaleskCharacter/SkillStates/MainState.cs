@@ -71,10 +71,6 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             {
                 var darkSkills = characterBody.gameObject.GetComponent<KoaleskDarkSkills>();
                 var skillLocator = characterBody.skillLocator;
-                var movementInputDot = Vector3.Dot(inputBank.moveVector.normalized, aimDirection.normalized);
-
-                // Define a small threshold value, like 0.1
-                float threshold = 0.1f;
 
                 if (skillLocator.primary && skillLocator.secondary && skillLocator.utility && skillLocator.special)
                 {
@@ -89,21 +85,69 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                             break;
                         }
                     }
-                    if (movementInputDot >= -threshold)
+                    if (inputBank.rawMoveDown.down && !inputBank.rawMoveLeft.down && !inputBank.rawMoveRight.down)
                     {
-                        skillLocator.primary.UnsetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                        skillLocator.secondary.UnsetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                        skillLocator.utility.UnsetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                        skillLocator.special.UnsetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                        float primaryCd = skillLocator.primary.rechargeStopwatch;
+                        int primaryStock = skillLocator.primary.stock;
+
+                        float secondaryCd = skillLocator.secondary.rechargeStopwatch;
+                        int secondaryStock = skillLocator.secondary.stock;  
+
+                        float utilityCd = skillLocator.utility.rechargeStopwatch;
+                        int utilityStock = skillLocator.utility.stock;
+
+                        float specialCd = skillLocator.special.rechargeStopwatch;
+                        int specialStock = skillLocator.special.stock;  
+
+                        skillLocator.primary.SetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                        skillLocator.secondary.SetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                        skillLocator.utility.SetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                        skillLocator.special.SetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+
+                        skillLocator.primary.rechargeStopwatch = primaryCd;
+                        skillLocator.primary.stock = primaryStock;
+
+                        skillLocator.secondary.rechargeStopwatch= secondaryCd;
+                        skillLocator.secondary.stock = secondaryStock;
+
+                        skillLocator.utility.rechargeStopwatch = utilityCd;
+                        skillLocator.utility.stock = utilityStock;
+
+                        skillLocator.special.rechargeStopwatch = specialCd;
+                        skillLocator.special.stock = specialStock;
                     }
                     else
                     {
                         if(b && !(b.state is ChargeBloodyStake) && !(b.state is FireBloodyStake))
                         {
-                            skillLocator.primary.SetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                            skillLocator.secondary.SetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                            skillLocator.utility.SetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
-                            skillLocator.special.SetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Replacement);
+                            float primaryCd = skillLocator.primary.rechargeStopwatch;
+                            int primaryStock = skillLocator.primary.stock;
+
+                            float secondaryCd = skillLocator.secondary.rechargeStopwatch;
+                            int secondaryStock = skillLocator.secondary.stock;
+
+                            float utilityCd = skillLocator.utility.rechargeStopwatch;
+                            int utilityStock = skillLocator.utility.stock;
+
+                            float specialCd = skillLocator.special.rechargeStopwatch;
+                            int specialStock = skillLocator.special.stock;
+
+                            skillLocator.primary.UnsetSkillOverride(characterBody, darkSkills.darkPrimarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                            skillLocator.secondary.UnsetSkillOverride(characterBody, darkSkills.darkSecondarySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                            skillLocator.utility.UnsetSkillOverride(characterBody, darkSkills.darkUtilitySkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+                            skillLocator.special.UnsetSkillOverride(characterBody, darkSkills.darkSpecialSkillSlot.skillDef, GenericSkill.SkillOverridePriority.Contextual);
+
+                            skillLocator.primary.rechargeStopwatch = primaryCd;
+                            skillLocator.primary.stock = primaryStock;
+
+                            skillLocator.secondary.rechargeStopwatch = secondaryCd;
+                            skillLocator.secondary.stock = secondaryStock;
+
+                            skillLocator.utility.rechargeStopwatch = utilityCd;
+                            skillLocator.utility.stock = utilityStock;
+
+                            skillLocator.special.rechargeStopwatch = specialCd;
+                            skillLocator.special.stock = specialStock;
                         }
                     }
                 }

@@ -13,6 +13,7 @@ using UnityEngine.Networking;
 using UnityEngine.UIElements;
 using static RoR2.DotController;
 using UnityEngine.Diagnostics;
+using System.ComponentModel;
 
 namespace KoaleskMod.KoaleskCharacter.Content
 {
@@ -21,14 +22,16 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static DamageAPI.ModdedDamageType Default;
         public static DamageAPI.ModdedDamageType KoaleskDarkThornDamage;
         public static DamageAPI.ModdedDamageType KoaleskLiquorDamage;
-        public static DamageAPI.ModdedDamageType KoaleskBlightedDamage;
+        public static DamageAPI.ModdedDamageType KoaleskBlightDamage;
         public static DamageAPI.ModdedDamageType KoaleskBlightProjectileDamage;
+        public static DamageAPI.ModdedDamageType KoaleskGardenDamage;
         internal static void Init()
         {
             Default = DamageAPI.ReserveDamageType();
             KoaleskDarkThornDamage = DamageAPI.ReserveDamageType();
-            KoaleskBlightedDamage = DamageAPI.ReserveDamageType();
+            KoaleskBlightDamage = DamageAPI.ReserveDamageType();
             KoaleskLiquorDamage = DamageAPI.ReserveDamageType();
+            KoaleskGardenDamage = DamageAPI.ReserveDamageType();
             Hook();
         }
         private static void Hook()
@@ -60,15 +63,41 @@ namespace KoaleskMod.KoaleskCharacter.Content
                             koaleskController.AddBuffResetDecay(KoaleskBuffs.koaleskBlightBuff);
                         }
 
-                        if (damageInfo.HasModdedDamageType(KoaleskBlightedDamage))
+                        if (damageInfo.HasModdedDamageType(KoaleskBlightDamage))
                         {
                             koaleskController.AddBuffResetDecay(KoaleskBuffs.koaleskLiquorBuff);
                         }
                     }
 
-                    if (damageInfo.HasModdedDamageType(KoaleskDarkThornDamage) && victimBody && attackerBody)
+                    if(victimBody && attackerBody)
                     {
-                        PullEnemiesTowardsBody(attackerBody, victimBody, 25f);
+                        if (attackerBody.HasBuff(KoaleskBuffs.koaleskGardenBuff) && damageInfo.damageColorIndex != DamageColorIndex.Item && !damageInfo.HasModdedDamageType(KoaleskGardenDamage))
+                        {
+                            float damageCoefficient2 = 0.2f;
+                            float damage = Util.OnHitProcDamage(damageInfo.damage, attackerBody.damage, damageCoefficient2);
+                            float force = 0f;
+                            Vector3 position = damageInfo.position;
+                            ProjectileManager.instance.FireProjectile(KoaleskAssets.KoaleskGardenFlower, position, Quaternion.identity, damageInfo.attacker, damage, force, damageInfo.crit, DamageColorIndex.Item);
+
+                            for(int i = 0; i < attackerBody.GetBuffCount(KoaleskBuffs.koaleskGardenBuff) - 1; i++)
+                            {
+                                Vector3 newPosition = position + new Vector3(
+                                    (UnityEngine.Random.value - 0.5f) * 10f,
+                                    (UnityEngine.Random.value - 0.5f) * 10f,
+                                    (UnityEngine.Random.value - 0.5f) * 10f);
+
+                                ProjectileManager.instance.FireProjectile(KoaleskAssets.KoaleskGardenFlower, newPosition, Quaternion.identity, damageInfo.attacker, damage, force, damageInfo.crit, DamageColorIndex.Item);
+                            }
+                        }
+                        else if(damageInfo.HasModdedDamageType(KoaleskGardenDamage))
+                        {
+                            attackerBody.healthComponent.Heal(attackerBody.healthComponent.fullHealth * 0.025f, default(ProcChainMask));
+                        }
+
+                        if (damageInfo.HasModdedDamageType(KoaleskDarkThornDamage))
+                        {
+                            PullEnemiesTowardsBody(attackerBody, victimBody, 25f);
+                        }
                     }
                 }
             }

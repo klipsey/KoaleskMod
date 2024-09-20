@@ -303,7 +303,7 @@ namespace KoaleskMod.KoaleskCharacter
                 interruptPriority = InterruptPriority.Skill,
 
                 baseMaxStock = 1,
-                baseRechargeInterval = 6f,
+                baseRechargeInterval = 5f,
                 rechargeStock = 1,
                 requiredStock = 1,
                 stockToConsume = 1,
@@ -336,11 +336,11 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texFlowerDance"),
 
-                activationState = new SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new SerializableEntityStateType(typeof(FlowerDance)),
                 activationStateMachineName = "Dash",
                 interruptPriority = InterruptPriority.Skill,
 
-                baseRechargeInterval = 7f,
+                baseRechargeInterval = 6f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -353,7 +353,7 @@ namespace KoaleskMod.KoaleskCharacter
                 mustKeyPress = false,
                 beginSkillCooldownOnSkillEnd = true,
 
-                isCombatSkill = false,
+                isCombatSkill = true,
                 canceledFromSprinting = false,
                 cancelSprintingOnActivation = false,
                 forceSprintDuringState = false,
@@ -370,11 +370,11 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texShadowDance"),
 
-                activationState = new SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new SerializableEntityStateType(typeof(ShadowDance)),
                 activationStateMachineName = "Dash",
                 interruptPriority = InterruptPriority.Skill,
 
-                baseRechargeInterval = 7f,
+                baseRechargeInterval = 6f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -384,13 +384,13 @@ namespace KoaleskMod.KoaleskCharacter
                 resetCooldownTimerOnUse = false,
                 fullRestockOnAssign = true,
                 dontAllowPastMaxStocks = false,
-                mustKeyPress = false,
+                mustKeyPress = true,
                 beginSkillCooldownOnSkillEnd = true,
 
                 isCombatSkill = false,
                 canceledFromSprinting = false,
                 cancelSprintingOnActivation = false,
-                forceSprintDuringState = false,
+                forceSprintDuringState = true,
 
             });
 
@@ -409,11 +409,11 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texScarletGarden"),
 
-                activationState = new EntityStates.SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(ScarletGarden)),
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 6f,
+                baseRechargeInterval = 8f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -442,11 +442,11 @@ namespace KoaleskMod.KoaleskCharacter
                 keywordTokens = new string[] { },
                 skillIcon = assetBundle.LoadAsset<Sprite>("texDeadOfNight"),
 
-                activationState = new SerializableEntityStateType(typeof(RoseThorn)),
+                activationState = new SerializableEntityStateType(typeof(DeadNight)),
                 activationStateMachineName = "Weapon",
                 interruptPriority = InterruptPriority.Skill,
 
-                baseRechargeInterval = 7f,
+                baseRechargeInterval = 8f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -457,9 +457,9 @@ namespace KoaleskMod.KoaleskCharacter
                 fullRestockOnAssign = true,
                 dontAllowPastMaxStocks = false,
                 mustKeyPress = false,
-                beginSkillCooldownOnSkillEnd = true,
+                beginSkillCooldownOnSkillEnd = false,
 
-                isCombatSkill = false,
+                isCombatSkill = true,
                 canceledFromSprinting = false,
                 cancelSprintingOnActivation = false,
                 forceSprintDuringState = false,

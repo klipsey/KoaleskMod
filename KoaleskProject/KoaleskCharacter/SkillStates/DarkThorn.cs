@@ -13,11 +13,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
     {
         public static GameObject clawTracer = Addressables.LoadAssetAsync<GameObject>("RoR2/DLC1/Railgunner/TracerRailgunCryo.prefab").WaitForCompletion();
         private GameObject swingInstance;
-        private int blightStacks;
+        private bool hasBlight;
         public override void OnEnter()
         {
-            blightStacks = characterBody.GetBuffCount(KoaleskBuffs.koaleskBlightBuff);
-
             RefreshState();
             hitboxGroupName = "DarkThornHitbox";
 
@@ -26,7 +24,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
             procCoefficient = 1f;
             pushForce = 0;
             bonusForce = Vector3.zero;
-            baseDuration = 1.6f;
+            baseDuration = 1.1f;
 
             //0-1 multiplier of baseduration, used to time when the hitbox is out (usually based on the run time of the animation)
             //for example, if attackStartPercentTime is 0.5, the attack will start hitting halfway through the ability. if baseduration is 3 seconds, the attack will start happening at 1.5 seconds
@@ -52,7 +50,9 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             base.OnEnter();
 
-            koaleskController.ConsumeBlight();
+            hasBlight = characterBody.HasBuff(KoaleskBuffs.koaleskBlightBuff);
+
+            if (hasBlight) koaleskController.ConsumeBlight(characterBody.GetBuffCount(KoaleskBuffs.koaleskBlightBuff) - 1);
         }
 
         protected override void OnHitEnemyAuthority()
@@ -80,7 +80,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     HitEffectNormal = false,
                     procChainMask = default(ProcChainMask),
                     procCoefficient = procCoefficient,
-                    maxDistance = 20f + blightStacks,
+                    maxDistance = 20f + (hasBlight ? 20f : 0f),
                     radius = 6f,
                     isCrit = RollCrit(),
                     muzzleName = "HandL",
@@ -94,7 +94,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                     stopperMask = LayerIndex.world.mask
             };
                 bulletAttack.AddModdedDamageType(DamageTypes.KoaleskDarkThornDamage);
-                bulletAttack.AddModdedDamageType(DamageTypes.KoaleskBlightedDamage);
+                bulletAttack.AddModdedDamageType(DamageTypes.KoaleskBlightDamage);
 
                 bulletAttack.Fire();
 

@@ -36,7 +36,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             characterMotor.Motor.ForceUnground();
         }
-
+        
         public override void FixedUpdate()
         {
             base.FixedUpdate();

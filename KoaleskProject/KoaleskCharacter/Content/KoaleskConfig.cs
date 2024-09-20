@@ -13,7 +13,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static ConfigEntry<float> swingLargeDamageCoefficient;
         public static ConfigEntry<float> darkThornDamageCoefficient;
         public static ConfigEntry<float> bloodyStakeDamageCoefficient;
-        public static ConfigEntry<float> chargeDamageCoefficient;
+        public static ConfigEntry<float> shadowDanceDamageCoefficient;
         public static ConfigEntry<float> swordSlamDamageCoefficient;
 
         public static ConfigEntry<KeyboardShortcut> restKey;
@@ -43,7 +43,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             bloodyStakeDamageCoefficient = Config.BindAndOptions(section2, "Bloody Stake Damage", 0.5f, "Change the Bloody Stake Damage Coefficient.", false);
 
-            chargeDamageCoefficient = Config.BindAndOptions(section2, "Charge Damage", 7f, "Change the damage coefficient of Shoulder Bash.", false);
+            shadowDanceDamageCoefficient = Config.BindAndOptions(section2, "Shadow Dance Damage", 2.5f, "Change the damage coefficient of Shadow Dance.", false);
 
             restKey = Config.BindAndOptions(section3, "Rest Emote", new KeyboardShortcut(KeyCode.Alpha1), "Key used to Rest");
 
