@@ -143,6 +143,10 @@ namespace KoaleskMod.KoaleskCharacter
 
         private void AdditionalBodySetup()
         {
+            bool buffRequired(CharacterBody body) => body.HasBuff(KoaleskBuffs.koaleskDeadOfNightBuff);
+            float radius(CharacterBody body) => body.radius;
+            TempVisualEffectAPI.AddTemporaryVisualEffect(KoaleskAssets.heldEffect, radius, buffRequired);
+
             AddHitboxes();
             bodyPrefab.AddComponent<KoaleskController>();
         }
@@ -354,8 +358,8 @@ namespace KoaleskMod.KoaleskCharacter
                 beginSkillCooldownOnSkillEnd = true,
 
                 isCombatSkill = true,
-                canceledFromSprinting = false,
-                cancelSprintingOnActivation = false,
+                canceledFromSprinting = true,
+                cancelSprintingOnActivation = true,
                 forceSprintDuringState = false,
 
             });
@@ -446,7 +450,7 @@ namespace KoaleskMod.KoaleskCharacter
                 activationStateMachineName = "Weapon",
                 interruptPriority = InterruptPriority.Skill,
 
-                baseRechargeInterval = 8f,
+                baseRechargeInterval = 12f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -578,7 +582,7 @@ namespace KoaleskMod.KoaleskCharacter
         private void AddHooks()
         {
             On.RoR2.UI.LoadoutPanelController.Rebuild += LoadoutPanelController_Rebuild;
-            On.RoR2.HealthComponent.TakeDamage += new On.RoR2.HealthComponent.hook_TakeDamage(HealthComponent_TakeDamage);
+            On.RoR2.HealthComponent.TakeDamageProcess += new On.RoR2.HealthComponent.hook_TakeDamageProcess(HealthComponent_TakeDamageProcess);
             RecalculateStatsAPI.GetStatCoefficients += RecalculateStatsAPI_GetStatCoefficients;
 
             if(KoaleskPlugin.emotesInstalled) Emotes();
@@ -642,7 +646,7 @@ namespace KoaleskMod.KoaleskCharacter
                 }
             }
         }
-        private void HealthComponent_TakeDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
+        private void HealthComponent_TakeDamageProcess(On.RoR2.HealthComponent.orig_TakeDamageProcess orig, HealthComponent self, DamageInfo damageInfo)
         {
             if (NetworkServer.active && self.alive || !self.godMode || self.ospTimer <= 0f)
             {

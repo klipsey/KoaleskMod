@@ -9,6 +9,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static BuffDef koaleskLiquorBuff;
         public static BuffDef koaleskBlightBuff;
         public static BuffDef koaleskGardenBuff;
+        public static BuffDef koaleskDeadOfNightBuff;
         public static void Init(AssetBundle assetBundle)
         {
             koaleskLiquorBuff = Modules.Content.CreateAndAddBuff("KoaleskLiquorBuff", assetBundle.LoadAsset<Sprite>("IconBloodliquor"),
@@ -17,6 +18,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
                 Color.white, true, false, false);
             koaleskGardenBuff = Modules.Content.CreateAndAddBuff("KoaleskGardenBuff", assetBundle.LoadAsset<Sprite>("IconBloodliquor"),
                 Color.red, true, false, false);
+            koaleskDeadOfNightBuff = Modules.Content.CreateAndAddBuff("KoaleskDeadOfNightBuff", assetBundle.LoadAsset<Sprite>("IconBloodliquor"),
+                Color.black, false, true, false);
         }
     }
 }

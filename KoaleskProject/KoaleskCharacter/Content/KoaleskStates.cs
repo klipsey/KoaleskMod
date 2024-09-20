@@ -23,6 +23,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
             Modules.Content.AddEntityState(typeof(ScarletGarden));
             Modules.Content.AddEntityState(typeof(DeadNight));
+
+            Modules.Content.AddEntityState(typeof(HeldState));
         }
     }
 }
