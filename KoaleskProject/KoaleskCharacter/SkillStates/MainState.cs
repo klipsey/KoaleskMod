@@ -85,7 +85,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                             break;
                         }
                     }
-                    if (inputBank.rawMoveDown.down && !inputBank.rawMoveLeft.down && !inputBank.rawMoveRight.down)
+                    if (inputBank.rawMoveDown.down)
                     {
                         float primaryCd = skillLocator.primary.rechargeStopwatch;
                         int primaryStock = skillLocator.primary.stock;

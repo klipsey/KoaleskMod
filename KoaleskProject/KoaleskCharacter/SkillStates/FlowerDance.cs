@@ -125,7 +125,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
                 if (NetworkServer.active)
                 {
-                    koaleskController.ConsumeBloodLiquor(characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff) - 1);
+                    koaleskController.ConsumeLiquor(characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff) - 1);
                 }
 
                 stacksAvailable--;

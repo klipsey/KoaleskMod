@@ -218,7 +218,32 @@ namespace KoaleskMod.KoaleskCharacter
                 stockToConsume = 1
             });
 
-            Skills.AddAdditionalSkills(passive.passiveSkillSlot.skillFamily, passive.koaleskPassive);
+            passive.koaleskGoodPassive = Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = "KoaleskGoodPassive",
+                skillNameToken = KOALESK_PREFIX + "PASSIVE2_NAME",
+                skillDescriptionToken = KOALESK_PREFIX + "PASSIVE2_DESCRIPTION",
+                skillIcon = assetBundle.LoadAsset<Sprite>("texKoaleskPassiveIcon"),
+                keywordTokens = new string[] { },
+                activationState = new EntityStates.SerializableEntityStateType(typeof(Idle)),
+                activationStateMachineName = "",
+                baseMaxStock = 1,
+                baseRechargeInterval = 0f,
+                beginSkillCooldownOnSkillEnd = false,
+                canceledFromSprinting = false,
+                forceSprintDuringState = false,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.Any,
+                resetCooldownTimerOnUse = false,
+                isCombatSkill = false,
+                mustKeyPress = false,
+                cancelSprintingOnActivation = false,
+                rechargeStock = 1,
+                requiredStock = 2,
+                stockToConsume = 1
+            });
+
+            Skills.AddAdditionalSkills(passive.passiveSkillSlot.skillFamily, passive.koaleskPassive, passive.koaleskGoodPassive);
         }
 
         private void AddPrimarySkills()
@@ -291,7 +316,7 @@ namespace KoaleskMod.KoaleskCharacter
                 forceSprintDuringState = false,
             });
 
-            Skills.AddSecondarySkills(bodyPrefab, bloodyStake);
+            Skills.AddAdditionalSkills(darkSkills.darkSecondarySkillSlot.skillFamily, bloodyStake);
 
             SkillDef graveStake = Skills.CreateSkillDef(new SkillDefInfo
             {
@@ -324,7 +349,7 @@ namespace KoaleskMod.KoaleskCharacter
                 forceSprintDuringState = false,
             });
 
-            Skills.AddAdditionalSkills(darkSkills.darkSecondarySkillSlot.skillFamily, graveStake);
+            Skills.AddSecondarySkills(bodyPrefab, graveStake);
 
         }
 
@@ -592,6 +617,18 @@ namespace KoaleskMod.KoaleskCharacter
         {
             if (sender.bodyIndex == BodyCatalog.FindBodyIndex("KoaleskBody"))
             {
+                KoaleskPassive koaleskPassive = sender.GetComponent<KoaleskPassive>();
+                if (koaleskPassive != null && koaleskPassive.isNice)
+                {
+                    if(sender.HasBuff(KoaleskBuffs.koaleskBlightBuff))
+                    {
+                        args.armorAdd -= 1f * sender.GetBuffCount(KoaleskBuffs.koaleskBlightBuff);
+                    }
+                    if(sender.HasBuff(KoaleskBuffs.koaleskLiquorBuff))
+                    {
+                        args.regenMultAdd += 0.1f * sender.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
+                    }
+                }
             }
         }
 

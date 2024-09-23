@@ -18,7 +18,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             float buffCount = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
 
-            koaleskController.ConsumeBloodLiquor();
+            koaleskController.ConsumeLiquor();
 
             duration = baseDuration + buffCount;
 
