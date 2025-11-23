@@ -23,6 +23,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
         //Materials
         internal static Material commandoMat;
+        internal static Material heldMat;
 
         //Shader
         internal static Shader hotpoo = Resources.Load<Shader>("Shaders/Deferred/HGStandard");
@@ -31,6 +32,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
         internal static GameObject swordSwingEffect;
         internal static GameObject swordBigSwingEffect;
         internal static GameObject swordHitEffect;
+
+        internal static GameObject heldEffect;
 
         internal static GameObject dashEffect;
 
@@ -86,7 +89,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
 
         private static void CreateMaterials()
         {
-
+            heldMat = Addressables.LoadAssetAsync<Material>("RoR2/Base/Common/VFX/matIsFrozen.mat").WaitForCompletion();
         }
 
         private static void CreateModels()
@@ -96,6 +99,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
         #region effects
         private static void CreateEffects()
         {
+            heldEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VoidFogMildEffect.prefab").WaitForCompletion().InstantiateClone("KoaleskHeldOverlayEffect");
+
             KoaleskHealEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/DLC1/EliteEarth/AffixEarthHealExplosion.prefab").WaitForCompletion().InstantiateClone("KoaleskLiquorHeal");
 
             Modules.Content.CreateAndAddEffectDef(KoaleskHealEffect);

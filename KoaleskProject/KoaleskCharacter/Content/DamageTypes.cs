@@ -5,15 +5,11 @@ using RoR2;
 using RoR2.Projectile;
 using KoaleskMod.Modules;
 using KoaleskMod.KoaleskCharacter.Components;
-using System;
-using System.Collections.Generic;
-using System.Threading;
+using EntityStates;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
-using static RoR2.DotController;
-using UnityEngine.Diagnostics;
-using System.ComponentModel;
+using KoaleskMod.KoaleskCharacter.SkillStates;
 
 namespace KoaleskMod.KoaleskCharacter.Content
 {
@@ -25,6 +21,8 @@ namespace KoaleskMod.KoaleskCharacter.Content
         public static DamageAPI.ModdedDamageType KoaleskBlightDamage;
         public static DamageAPI.ModdedDamageType KoaleskBlightProjectileDamage;
         public static DamageAPI.ModdedDamageType KoaleskGardenDamage;
+        public static DamageAPI.ModdedDamageType KoaleskDeadNightDamage;
+
         internal static void Init()
         {
             Default = DamageAPI.ReserveDamageType();
@@ -32,6 +30,7 @@ namespace KoaleskMod.KoaleskCharacter.Content
             KoaleskBlightDamage = DamageAPI.ReserveDamageType();
             KoaleskLiquorDamage = DamageAPI.ReserveDamageType();
             KoaleskGardenDamage = DamageAPI.ReserveDamageType();
+            KoaleskDeadNightDamage = DamageAPI.ReserveDamageType();
             Hook();
         }
         private static void Hook()
@@ -97,6 +96,53 @@ namespace KoaleskMod.KoaleskCharacter.Content
                         if (damageInfo.HasModdedDamageType(KoaleskDarkThornDamage))
                         {
                             PullEnemiesTowardsBody(attackerBody, victimBody, 25f);
+                        }
+
+                        if (damageInfo.HasModdedDamageType(KoaleskDeadNightDamage))
+                        {
+                            if (!victimBody.isBoss)
+                            {
+                                CharacterMotor victimMotor = victim.GetComponent<CharacterMotor>();
+                                victim.GetComponent<RigidbodyMotor>();
+                                if (victimMotor && victimMotor.isGrounded && !victimBody.isChampion && (victimBody.bodyFlags & CharacterBody.BodyFlags.IgnoreFallDamage) == 0 && !victimBody.HasBuff(KoaleskBuffs.koaleskDeadOfNightBuff))
+                                {
+                                    victimBody.AddTimedBuff(KoaleskBuffs.koaleskDeadOfNightBuff, 5f);
+                                    if (!victimBody.mainHurtBox)
+                                    {
+                                        _ = victimBody.transform;
+                                    }
+                                    else
+                                    {
+                                        _ = victimBody.mainHurtBox.transform;
+                                    }
+                                    Vector3 upVector = new Vector3(0f, 1f, 0f);
+                                    float massCalc = victimMotor.mass * 20f;
+                                    float finalCalc = massCalc + massCalc / 10f * 2f;
+                                    victimMotor.ApplyForce(finalCalc * upVector);
+
+                                    if (victim.TryGetComponent(out SetStateOnHurt setStateOnHurt))
+                                    {
+                                        HeldState bubbledState = new HeldState();
+                                        setStateOnHurt.targetStateMachine.SetInterruptState(bubbledState, InterruptPriority.Frozen);
+
+                                        EntityStateMachine[] array = setStateOnHurt.idleStateMachine;
+
+                                        for (int i = 0; i < array.Length; i++)
+                                        {
+                                            array[i].SetNextState(new Idle());
+                                        }
+                                    }
+                                    else if (victim.TryGetComponent(out EntityStateMachine entityMachine))
+                                    {
+                                        HeldState bubbledState = new HeldState();
+                                        entityMachine.SetInterruptState(bubbledState, InterruptPriority.Frozen);
+                                    }
+                                }
+                                else
+                                {
+                                    victimBody.AddTimedBuff(KoaleskBuffs.koaleskDeadOfNightBuff, 5f);
+                                }
+                            }
                         }
                     }
                 }

@@ -47,14 +47,17 @@ namespace KoaleskMod.KoaleskCharacter.Components
                     if (NetworkServer.active)
                     {
                         characterBody.RemoveBuff(KoaleskBuffs.koaleskLiquorBuff);
-                        HealingPulse healingPulse = new HealingPulse();
-                        healingPulse.healAmount = characterBody.maxHealth * 0.02f;
-                        healingPulse.origin = characterBody.corePosition;
-                        healingPulse.radius = 6f;
-                        healingPulse.effectPrefab = KoaleskAssets.KoaleskHealEffect;
-                        healingPulse.teamIndex = characterBody.teamComponent.teamIndex;
-                        healingPulse.overShield = 0f;
-                        healingPulse.Fire();
+                        if (base.GetComponent<KoaleskPassive>().isMid)
+                        {
+                            HealingPulse healingPulse = new HealingPulse();
+                            healingPulse.healAmount = characterBody.maxHealth * 0.02f;
+                            healingPulse.origin = characterBody.corePosition;
+                            healingPulse.radius = 6f;
+                            healingPulse.effectPrefab = KoaleskAssets.KoaleskHealEffect;
+                            healingPulse.teamIndex = characterBody.teamComponent.teamIndex;
+                            healingPulse.overShield = 0f;
+                            healingPulse.Fire();
+                        }
                     }
                     liquorDecayTimer = KoaleskConfig.buffIntervalDecayDelay.Value;
                 }
@@ -69,7 +72,7 @@ namespace KoaleskMod.KoaleskCharacter.Components
                 {
                     if (NetworkServer.active) characterBody.RemoveBuff(KoaleskBuffs.koaleskBlightBuff);
 
-                    if (hasAuthority)
+                    if (hasAuthority && base.GetComponent<KoaleskPassive>().isMid)
                     {
                         ProjectileManager.instance.FireProjectile(blightProjectilePrefab, characterBody.footPosition, Quaternion.identity, null, 0f, 0f, false, DamageColorIndex.Default, null);
                     }
@@ -99,7 +102,7 @@ namespace KoaleskMod.KoaleskCharacter.Components
                 }
             }
         }
-        public void ConsumeBloodLiquor(int buffCount = 0)
+        public void ConsumeLiquor(int buffCount = 0)
         {
             if(NetworkServer.active)
             {

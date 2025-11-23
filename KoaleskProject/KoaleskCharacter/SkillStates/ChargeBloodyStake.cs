@@ -36,7 +36,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             StartAimMode(GetAimRay(), 2f);
 
-            float stacksAvailable = characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff);
+            float stacksAvailable = characterBody.GetBuffCount(KoaleskBuffs.koaleskBlightBuff);
 
             characterMotor.velocity.y = 0f;
 
@@ -47,7 +47,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
                 stopwatch -= stackConsumptionDuration;
                 if (NetworkServer.active)
                 {
-                    characterBody.RemoveBuff(KoaleskBuffs.koaleskLiquorBuff);
+                    characterBody.RemoveBuff(KoaleskBuffs.koaleskBlightBuff);
 
                     var stakeProjectileVFX = UnityEngine.Object.Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube));
                     vfxCreated.Add(stakeProjectileVFX);

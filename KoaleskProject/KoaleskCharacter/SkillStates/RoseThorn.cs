@@ -58,7 +58,7 @@ namespace KoaleskMod.KoaleskCharacter.SkillStates
 
             hasBloodLiquor = characterBody.HasBuff(KoaleskBuffs.koaleskLiquorBuff);
 
-            if(hasBloodLiquor) koaleskController.ConsumeBloodLiquor(characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff) - 1);
+            if(hasBloodLiquor) koaleskController.ConsumeLiquor(characterBody.GetBuffCount(KoaleskBuffs.koaleskLiquorBuff) - 1);
         }
 
         public override void FixedUpdate()
